@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void){
+	int index, vetor[10], *pvetor;
+	pvetor = vetor;
+	
+	for(index = 0; index < 10; index++){
+		vetor[index] = 0;
+	}
+	for(index = 0; index < 10; index+=2){
+		*(pvetor+index) = 6;
+	}
+	for(index = 1; index < 10; index+=2){
+		*(pvetor+index) = 4;
+	}
+	printf("Vetor [ ");
+	for(index = 0; index < 10; index++){
+		printf("%d", *(pvetor + index) );
+	}
+	printf(" ] \n");
+	
+	system("pause");
+	return 0;
+}
